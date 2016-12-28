@@ -1,18 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import TodoList from './src/components/TodoList.js';
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-
-export default class ReactNativeTutorial extends Component {
+export default class ReactNativeTutorial extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -26,6 +16,7 @@ export default class ReactNativeTutorial extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <TodoList />
       </View>
     );
   }
