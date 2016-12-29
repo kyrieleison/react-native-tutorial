@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Todo from './Todo';
 
 export default class TodoList extends React.Component {
@@ -9,7 +9,7 @@ export default class TodoList extends React.Component {
       todos: [
         { id: 1, text: 'Pick up milk', complete: false },
         { id: 2, text: 'Grocery shopping', complete: false },
-        { id: 3, text: 'Oil change', complete: true }
+        { id: 3, text: 'Oil change', complete: true },
       ]
     };
   }
@@ -18,7 +18,9 @@ export default class TodoList extends React.Component {
     return (
       <View>
         { this.state.todos.map((todo) => {
-          return <Todo key={todo.id} text={todo.text} />;
+          return (
+            <Todo key={todo.id} text={todo.text} />
+          );
         }) }
       </View>
     );
