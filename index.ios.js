@@ -1,13 +1,16 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, NavigatorIOS, StyleSheet, Text, View } from 'react-native';
 import TodoList from './src/components/TodoList.js';
 
 export default class ReactNativeTutorial extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <TodoList />
-      </View>
+      <NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'Todo List',
+          component: TodoList
+        }} />
     );
   }
 }
@@ -15,7 +18,6 @@ export default class ReactNativeTutorial extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
   },
 });
 
